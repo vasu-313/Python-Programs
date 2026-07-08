@@ -1,5 +1,15 @@
-numbers = [1,2,3,4,5,7,8,9]
+def reverse_arr(arr):
+    left = 0 
+    right = len(arr) - 1
 
-numbers.reverse()
+    while left < right:
+        arr[left], arr[right] = arr[right], arr[left]
 
-print(numbers)
+        left += 1
+
+        right -= 1
+
+    return arr
+
+arr = [1,2,3,4,5,6,7,8]
+print(reverse_arr(arr))

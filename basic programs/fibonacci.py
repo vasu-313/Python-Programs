@@ -15,24 +15,24 @@
 #         b = c
 
 
-def generate_fibonacci_list(n):
-    if n == 0:
-        return [1]
-    elif n == 1:
-        return [1, 1]
-    else:
-        sequence = [1, 1]
-        a, b = 1, 1
-        for _ in range(2, n + 1):
-            c = a + b
-            sequence.append(c)
-            a, b = b, c
-        return sequence
+# def generate_fibonacci_list(n):
+#     if n == 0:
+#         return [1]
+#     elif n == 1:
+#         return [1, 1]
+#     else:
+#         sequence = [1, 1]
+#         a, b = 1, 1
+#         for _ in range(2, n + 1):
+#             c = a + b
+#             sequence.append(c)
+#             a, b = b, c
+#         return sequence
 
-# Example usage
-n = int(input("Enter the number of terms: "))
-fib_sequence = generate_fibonacci_list(n)
-print(*fib_sequence)
+# # Example usage
+# n = int(input("Enter the number of terms: "))
+# fib_sequence = generate_fibonacci_list(n)
+# print(*fib_sequence)
 
 
 
@@ -55,3 +55,45 @@ print(*fib_sequence)
 # num = int(input("Enter the number of terms: "))
 # print(fibonacci(num))    
     
+# def fibonacci(n):
+
+#     if n <= 0:
+#         return 0
+
+#     a = 0
+#     b = 1
+
+#     for i in range(n):
+#         print(a, end=" ")
+
+#         c = a + b
+#         a = b
+#         b = c
+
+
+# num = int(input("Enter number of terms: "))
+# fibonacci(num)
+
+
+def fibonacci(n):
+
+    if n <= 0:
+        return [0]
+
+    series = []
+
+    a = 0
+    b = 1
+
+    for i in range(n):
+        series.append(a)
+
+        c = a + b
+        a = b
+        b = c
+
+    return series
+
+
+num = int(input("Enter number of terms: "))
+print(fibonacci(num))

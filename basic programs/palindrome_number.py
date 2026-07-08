@@ -23,7 +23,7 @@ def is_palindrome(num):
         digit = num % 10
         reverse = reverse * 10 + digit
         num = num // 10
-    # return reverse == original_num    
+          
     if reverse == original_num:
         return "The number is palindrome"
     else:

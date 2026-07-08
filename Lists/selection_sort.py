@@ -10,10 +10,11 @@ def selection_sort(nums):
         nums[min_index] = temp
     return nums    
       
-        
     
 nums = [5,6,7,2,4,9] 
 print(selection_sort(nums))
+
+
 
 
 

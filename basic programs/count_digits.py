@@ -6,8 +6,8 @@ def count_digits(num):
         count += 1
     return count
 print(count_digits(1234567))    
-print(count_digits(-1234567))    
-
+print(count_digits(1234))    
+print("vasu")
 
 
 

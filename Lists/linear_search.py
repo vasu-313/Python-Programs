@@ -1,15 +1,17 @@
-def linear_search(l,target):
-    for i in range(0, len(l)):
-        if l[i] == target:
+def linear_search(nums, target):
+
+    for i in range(0, len(nums)):
+        if nums[i] == target:
             return i
-    return -1
-    
-l = [1,2,3,3,4,5]
-target = 3  
+        elif nums[i] > target:
+            return i
 
-result = linear_search(l, target)
+    return len(nums)    
 
-if result != -1:
-    print(result)
-else:
-    print("not found")
+nums = [1,3,5,6]
+target = 2  # 5 , # 2 , #7   
+
+print(linear_search(nums, target))
+
+
+        
