@@ -97,13 +97,43 @@ def print11(n):
         
         
         
+        
+def print20(n):
+    space = 2*n - 2
+    for i in range(1, 2*n):
+        
+        if i > 5: stars = 2*n-i
+        else: stars = i
+            
+        for j in range(0, stars):
+            print("*", end="")
+                
+        for k in range(0, space):
+            print(" ", end="")
+        
+        for l in range(0,stars):
+            print("*", end="")
+        
+        print()
+        if i < 5 :  space -= 2 
+        else:  space += 2
+
+def print21(n):
+    for i in range(0,n):
+        for j in range(0,n):
+            if i == 0 or j == 0 or i == n-1 or j == n-1:
+                print("*", end="")
+            else : 
+                print(" ", end="")
+            
+        print()
 
 def main():
     t = int(input("Enter a test case: "))
     
     for i in range(0,t):
        n =  int(input("Enter number: "))
-       print11(n)
+       print21(n)
 
 
 main()
